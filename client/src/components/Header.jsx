@@ -25,6 +25,7 @@ export default function Header() {
   return (
     <header className="bg-blue-500 shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
+        
         <Link to="/">
           <h1 className="font-bold text-lg sm:text-sm flex flex-wrap">
             <span className=" text-slate-100 text-3xl">Magic </span>
@@ -38,11 +39,13 @@ export default function Header() {
               Home
             </li>
           </Link>
+
           <Link to="/about">
             <li className="hidden md:inline text-slate-100 hover:underline">
               About
             </li>
           </Link>
+
           <Link to="/profile">
             {currentUser ? (
               <img

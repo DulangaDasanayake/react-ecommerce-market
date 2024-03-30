@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 import { useSelector } from 'react-redux';
 import { useRef, useState, useEffect } from 'react';
 import {

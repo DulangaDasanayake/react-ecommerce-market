@@ -1,3 +1,4 @@
+//imports
 import bcryptjs from "bcryptjs";
 import User from "../models/user.model.js";
 import { errorHandler } from "../utils/error.js";
@@ -9,6 +10,7 @@ export const test = (req, res) => {
   });
 };
 
+//update the user profile
 export const updateUser = async (req, res, next) => {
   if (req.user.id !== req.params.id)
     return next(errorHandler(401, "You can only update your own account!"));
@@ -38,6 +40,7 @@ export const updateUser = async (req, res, next) => {
   }
 };
 
+//delete user function controller
 export const deleteUser = async (req, res, next) => {
   if (req.user.id !== req.params.id)
     return next(errorHandler(401, "You can only delete your own account!"));
@@ -50,6 +53,7 @@ export const deleteUser = async (req, res, next) => {
   }
 };
 
+//get user function controller
 export const getUserListings = async (req, res, next) => {
   if (req.user.id === req.params.id) {
     try {

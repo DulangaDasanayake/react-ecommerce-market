@@ -1,9 +1,8 @@
 <div align="center">
 
-  # MERN SHOP
-  
+# MERN SHOP
 
-  🛒🚀 Full-stack e-commerce application built with the MERN stack, Tailwind CSS, Firebase, and hosted on Render.com. Browse, shop, and checkout with ease!
+🛒🚀 Full-stack e-commerce web application built with the MERN stack(MongoDB,Express-JS,React-JS & Node-JS), Tailwind CSS, Firebase, and hosted on Render.com. Browse, shop, and checkout with ease!
 
 </div>
 
@@ -28,23 +27,33 @@
 ## 🛠️ Technologies Used
 
 - **Frontend:**
+
   - React.js
   - Redux for state management
   - React Router for navigation
   - Tailwind CSS for styling
 
 - **Backend:**
+
   - Node.js
   - Express.js
-  - MongoDB for database
   - Mongoose for object modeling
   - JSON Web Tokens (JWT) for authentication
 
+- **Database**
+
+  - MongoDB for product & user detail storing
+  - Firebase for store photos
+
 - **Authentication:**
+
   - Firebase Authentication for Google authentication
 
 - **Hosting:**
   - Render.com for deployment and hosting
+  - Web App Link: <https://mern-shop-main.onrender.com>
+    I'm Sending My Regards for the Render.com for providing free hosting feature.
+    It is so much helpful for teachers and students work with IT Industry.
 
 ## 🔧 Installation
 
@@ -63,9 +72,9 @@
 3. **Install dependencies for both frontend and backend:**
 
    ```bash
-   cd frontend
+   cd client
    npm install
-   cd ../backend
+   cd ..
    npm install
    ```
 
@@ -77,6 +86,7 @@
    PORT=5000
    MONGODB_URI=your_mongodb_uri
    JWT_SECRET=your_jwt_secret
+   VITE_FIREBASE_API_KEY=your_vite_firebase_api_key
    ```
 
    Replace `your_mongodb_uri` with your MongoDB connection string and `your_jwt_secret` with a secret key for JWT.
@@ -101,7 +111,7 @@
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+Contributors are welcome! If you'd like to contribute to this project, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/new-feature`).
@@ -115,5 +125,3 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-

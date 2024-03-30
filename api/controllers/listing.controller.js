@@ -10,6 +10,7 @@ export const createListing = async (req, res, next) => {
   }
 };
 
+//delete listing function controller
 export const deleteListing = async (req, res, next) => {
   const listing = await Listing.findById(req.params.id);
 
@@ -29,6 +30,7 @@ export const deleteListing = async (req, res, next) => {
   }
 };
 
+//update listing function controller
 export const updateListing = async (req, res, next) => {
   const listing = await Listing.findById(req.params.id);
   if (!listing) {
@@ -50,6 +52,7 @@ export const updateListing = async (req, res, next) => {
   }
 };
 
+//get(view) listing function controller
 export const getListing = async (req, res, next) => {
   try {
     const listing = await Listing.findById(req.params.id);
