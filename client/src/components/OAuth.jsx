@@ -12,8 +12,10 @@ export default function OAuth() {
       const provider = new GoogleAuthProvider();
       const auth = getAuth(app);
 
+      //await for popup google account signin
       const result = await signInWithPopup(auth, provider);
 
+      //send google data to backend
       const res = await fetch('/api/auth/google', {
         method: 'POST',
         headers: {
@@ -33,6 +35,7 @@ export default function OAuth() {
     }
   };
   return (
+    //login with google button
     <button
       onClick={handleGoogleClick}
       type='button'

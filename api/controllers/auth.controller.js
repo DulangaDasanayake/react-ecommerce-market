@@ -36,7 +36,7 @@ export const signin = async (req, res, next) => {
   }
 };
 
-//google authentication for sign in with google
+//google authentication for sign in with google... async=await
 export const google = async (req, res, next) => {
   try {
     //request from frontend for a email
@@ -50,9 +50,11 @@ export const google = async (req, res, next) => {
         .status(200)
         .json(rest);
     }
-    //if the email do not exists || generate a password by `Math.random()`
+    //google signin do not having passwords || generate a password by `Math.random()`
     else {
       const generatedPassword =
+        /*toString(26) means A-Z(26) + 0-9(10) = 26
+        slice(-8) means gets last 8 digits of randomly made alphanumeric*/
         Math.random().toString(36).slice(-8) +
         Math.random().toString(36).slice(-8);
 
@@ -61,9 +63,11 @@ export const google = async (req, res, next) => {
       //save the new user
       const newUser = new User({
         username:
-          //convert `Dulanga Niroshan` to `dulanganiroshan8923623` username shouldn't be seperated || make it unique
+          /*convert `Dulanga Niroshan` to `dulanganiroshan8923` username 
+          shouldn't be seperated, make it unique*/
           req.body.name.split(" ").join("").toLowerCase() +
           Math.random().toString(36).slice(-4),
+          //pass email,pwd and avatar photo
         email: req.body.email,
         password: hashedPassword,
         avatar: req.body.photo,
@@ -81,9 +85,10 @@ export const google = async (req, res, next) => {
   }
 };
 
-//signout function created
+//signout function is here
 export const signOut = async (req, res, next) => {
   try {
+    //clear cookie file from browser
     res.clearCookie("access_token");
     res.status(200).json("User has been logged out!");
   } catch (error) {

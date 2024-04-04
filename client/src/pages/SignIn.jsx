@@ -73,10 +73,10 @@ export default function SignIn() {
       <div className='flex gap-2 mt-5'>
         <p>Don't have an account?</p>
         <Link to={'/sign-up'}>
-          <span className='text-blue-700'>Sign up</span>
+          <span className='text-green-700'>Sign up</span>
         </Link>
       </div><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      {error && <p className='text-red-500 mt-5'>{error}</p>}
+      {error && <p className='text-blue-500 mt-5'>{error}</p>}
     </div>
   );
 }

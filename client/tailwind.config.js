@@ -5,7 +5,7 @@ export default {
     extend: {},
   },
   plugins: [
-    //require('@tailwindcss/line-clamp'), commented because line-clamp is provide default on tailwind dependencies
+    //require('@tailwindcss/line-clamp'), i commented because line-clamp is provide default on tailwind dependencies
     // ...
   ],
 };

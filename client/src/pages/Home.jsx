@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,9 +10,13 @@ export default function Home() {
   const [offerListings, setOfferListings] = useState([]);
   const [saleListings, setSaleListings] = useState([]);
   const [rentListings, setRentListings] = useState([]);
+
   SwiperCore.use([Navigation]);
   console.log(offerListings);
+
   useEffect(() => {
+
+    //offers listing
     const fetchOfferListings = async () => {
       try {
         const res = await fetch("/api/listing/get?offer=true&limit=4");
@@ -24,6 +27,8 @@ export default function Home() {
         console.log(error);
       }
     };
+
+    //rent listing
     const fetchRentListings = async () => {
       try {
         const res = await fetch("/api/listing/get?type=rent&limit=4");
@@ -34,6 +39,8 @@ export default function Home() {
         console.log(error);
       }
     };
+
+    //sale listing
     const fetchSaleListings = async () => {
       try {
         const res = await fetch("/api/listing/get?type=sale&limit=4");
@@ -43,20 +50,21 @@ export default function Home() {
         console.log(error);
       }
     };
+
     fetchOfferListings();
   }, []);
   return (
     <div>
       {/* top */}
       <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
-        <h1 className="text-blue-400 font-bold text-3xl lg:text-6xl">
-          Select Your Best <span className="text-slate-500">Computer</span>
+        <h1 className="text-blue-700 font-bold text-3xl lg:text-6xl">
+          Select Your Best <span className="text-slate-700">Computer</span>
           <br />
           Solution from us !!
         </h1>
-        <div className="text-gray-600 text-xl sm:text-sm">
-          Magic Computers is the Excellent place to find your perfect Computer
-          to Everyday Use.
+        <div className="text-gray-800 text-xl sm:text-sm">
+          Magic Technologies is the Excellent place to find your perfect
+          Computer to Everyday Use.
           <br />
           We have a wide range of Computers & Components for you to choose from.
           <br />
@@ -67,16 +75,16 @@ export default function Home() {
           to={"/search"}
           className="text-md sm:text-sm text-blue-700 font-bold hover:underline"
         >
-          Let's Explore our products...
+          Let`s Explore our products...
         </Link>
       </div>
 
       {/* swiper */}
+
       <Swiper navigation>
         {offerListings &&
           offerListings.length > 0 &&
-          offerListings.map((listing) => (
-            // eslint-disable-next-line react/jsx-key
+          offerListings.map((listing) => {
             <SwiperSlide>
               <div
                 style={{
@@ -86,8 +94,8 @@ export default function Home() {
                 className="h-[500px]"
                 key={listing._id}
               ></div>
-            </SwiperSlide>
-          ))}
+            </SwiperSlide>;
+          })}
       </Swiper>
 
       {/* listing results for offer, sale and rent */}

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import "./footer.css";
 import { FaDiscord, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -10,7 +11,7 @@ export default function Footer() {
           <div className="sb__footer-links_div">
             <h4>Working hours</h4>
             <a href="/">
-              <p>Mon : 09:30AM - 06:00PM </p>
+              <p>Mon-Fri : 09:30AM - 06:00PM </p>
             </a>
             <a href="/">
               <p>Sat : 9:30AM - 2:00PM </p>
@@ -31,16 +32,16 @@ export default function Footer() {
           <div className="sb__footer-links_div">
             <h4>Partners</h4>
             <a href="https://www.apple.com">
-              <p>Apple</p>
+              <p>Apple inc.</p>
             </a>
             <a href="https://www.dell.com">
-              <p>Dell</p>
+              <p>Dell Computers</p>
             </a>
             <a href="https://www.hp.com">
-              <p>HP</p>
+              <p>Hewlett Packard</p>
             </a>
             <a href="https://www.lenovo.com">
-              <p>Lenovo</p>
+              <p>Lenovo Technologies</p>
             </a>
           </div>
           <div className="sb__footer-links_div">
@@ -51,24 +52,18 @@ export default function Footer() {
             <a href="">
               <p>Contact Us</p>
             </a>
-            <a href="/">
-              <p>Careers</p>
-            </a>
-            <a href="/">
-              <p>Press</p>
-            </a>
           </div>
           <div className="sb__footer-links_div">
-            <h4>Coming soon</h4>
+            <h4>Connect With us</h4>
             <div className="socialmedia gap-2 h-5 w-5">
-              <p>
-                <a href="https://www.twitter.com">
-                  <FaTwitter style={{ color: "#42b7ff", fontSize: "2rem" }} />
-                </a>
-              </p>
               <p>
                 <a href="https://www.facebook.com">
                   <FaFacebook style={{ color: "#0037a9", fontSize: "2rem" }} />
+                </a>
+              </p>
+              <p>
+                <a href="https://www.twitter.com">
+                  <FaTwitter style={{ color: "#42b7ff", fontSize: "2rem" }} />
                 </a>
               </p>
               <p>
@@ -89,26 +84,27 @@ export default function Footer() {
         <div className="sb__footer-below">
           <div className="sb__footer-copyright">
             <p>
-              ©{new Date().getFullYear()} Magic Computers. Allrights reserved.
+              ©{new Date().getFullYear()} Magic Technologies. Allrights
+              reserved.
             </p>
           </div>
           <div className="sb__footer-below-links">
-            <a href="/terms">
+            <a href="/">
               <div>
                 <p>Terms & Conditions</p>
               </div>
             </a>
-            <a href="/terms">
+            <a href="/">
               <div>
                 <p>Privacy</p>
               </div>
             </a>
-            <a href="/terms">
+            <a href="/">
               <div>
                 <p>Security</p>
               </div>
             </a>
-            <a href="/terms">
+            <a href="/">
               <div>
                 <p>Cookies</p>
               </div>

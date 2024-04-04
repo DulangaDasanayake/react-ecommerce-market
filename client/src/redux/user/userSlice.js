@@ -6,6 +6,7 @@ const initialState = {
   loading: false,
 };
 
+//manage user accounts
 const userSlice = createSlice({
   name: 'user',
   initialState,

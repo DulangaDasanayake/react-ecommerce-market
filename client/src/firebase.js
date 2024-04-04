@@ -5,6 +5,7 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
+  //api key moved to .env file and imported here because it cannot be revealed to public
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "mern-shop-bb8e3.firebaseapp.com",
   projectId: "mern-shop-bb8e3",

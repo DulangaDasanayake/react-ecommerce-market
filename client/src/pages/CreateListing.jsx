@@ -19,8 +19,8 @@ export default function CreateListing() {
     name: "",
     description: "",
     type: "",
-    regularPrice: 50,
-    discountPrice: 0,
+    regularPrice: "",
+    discountPrice: "",
     offer: false,
   });
   const [imageUploadError, setImageUploadError] = useState(false);
@@ -47,7 +47,7 @@ export default function CreateListing() {
           setUploading(false);
         })
         .catch((err) => {
-          setImageUploadError("Image upload failed (2 mb max per image)");
+          setImageUploadError("Image upload failed (10 mb max per image)");
           setUploading(false);
         });
     } else {
@@ -56,6 +56,7 @@ export default function CreateListing() {
     }
   };
 
+  //react hook for store image
   const storeImage = async (file) => {
     return new Promise((resolve, reject) => {
       const storage = getStorage(app);

@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema(
   {
+    //user account data at below
     username: {
       type: String,
       required: true,

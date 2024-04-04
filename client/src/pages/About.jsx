@@ -1,12 +1,12 @@
 export default function About() {
   return (
     <div className="py-20 px-4 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 text-black">
-        About Magic Computers...
+      <h1 className="text-3xl font-bold mb-4 text-blue-700">
+        About Magic Technologies...
       </h1>
       <p className="mb-4 text-black">
         <br />
-        Magic Computers is a leading technology company that specialize in
+        Magic Technologies is a leading technology company that specialize in
         helping clients to buy their future computers and also all other digital
         and technological components that need to their everyday life. Our team
         of experienced agents are dedicated to provide high quality services to

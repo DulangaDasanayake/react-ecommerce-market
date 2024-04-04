@@ -2,7 +2,9 @@
 
 # MERN SHOP
 
-🛒🚀 Full-stack e-commerce web application built with the MERN stack(MongoDB,Express-JS,React-JS & Node-JS), Tailwind CSS, Firebase, and hosted on Render.com. Browse, shop, and checkout with ease!
+Remember to give me your generous ⭐ Thanks you so much !!!
+
+🛒🚀 Full-stack E-commerce web application built with the MERN stack(MongoDB,Express,React & Node), Tailwind CSS, Firebase Auth, and hosted on Render.com Browse, shop, and checkout with ease!
 
 </div>
 
@@ -36,14 +38,14 @@
 - **Backend:**
 
   - Node.js
-  - Express.js
+  - Express.js for middleware
   - Mongoose for object modeling
   - JSON Web Tokens (JWT) for authentication
 
-- **Database**
+- **Database** 📊
 
   - MongoDB for product & user detail storing
-  - Firebase for store photos
+  - Firebase for authentication
 
 - **Authentication:**
 
@@ -51,9 +53,9 @@
 
 - **Hosting:**
   - Render.com for deployment and hosting
-  - Web App Link: <https://mern-shop-main.onrender.com>
-    I'm Sending My Regards for the Render.com for providing free hosting feature.
-    It is so much helpful for teachers and students work with IT Industry.
+  - Web App Demo Link: 🔗 <https://mern-shop-main.onrender.com>
+  - I'm Sending My Regards for the Render.com for providing free hosting feature.
+  - It is so much helpful for teachers and students work with IT Industry.
 
 ## 🔧 Installation
 
@@ -78,7 +80,7 @@
    npm install
    ```
 
-4. **Set up environment variables:**
+4. **Set up environment variables:** ⚙️
 
    Create a `.env` file in the `backend` directory and add the following variables:
 

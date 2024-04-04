@@ -1,4 +1,5 @@
-import { FaSearch } from "react-icons/fa";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { FaSearch, FaLaptop } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
@@ -25,11 +26,11 @@ export default function Header() {
   return (
     <header className="bg-blue-500 shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
-        
         <Link to="/">
-          <h1 className="font-bold text-lg sm:text-sm flex flex-wrap">
-            <span className=" text-slate-100 text-3xl">Magic </span>
-            <span className=" text-slate-300 text-3xl">Computers</span>
+          <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
+            <FaLaptop style={{ fontSize: "2rem" }} />
+            <span className=" text-slate-100 text-2xl">Magic </span>
+            <span className=" text-slate-300 text-2xl">Technologies</span>
           </h1>
         </Link>
 
@@ -66,7 +67,7 @@ export default function Header() {
           <input
             type="text"
             placeholder="Search.."
-            className="bg-transparent focus:outline-none w-42 sm:w-50"
+            className="bg-transparent focus:outline-none  w-24 sm:w-64"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
