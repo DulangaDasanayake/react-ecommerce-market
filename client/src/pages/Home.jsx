@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ListingItem from "../components/ListingItem";
+import ItemCard from "../components/ItemCard";
 
 //special feature
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -109,6 +110,24 @@ export default function Home() {
                 Show more offers
               </Link>
             </div>
+
+const imageUrls = [
+   https://www.javatpoint.com/ram,
+  // Add more image URLs as needed
+];
+            
+<div className="flex flex-wrap gap-4">
+  {offerListings.map((listing) => (
+    <ItemCard
+      key={listing._id}
+      image={listing.imageUrls[0]}
+      description={listing.description}
+      price={listing.price}
+    />
+  ))}
+</div>
+
+            
             <div className="flex flex-wrap gap-4">
               {offerListings.map((listing) => (
                 <ListingItem listing={listing} key={listing._id} />
