@@ -60,9 +60,9 @@ export default function Home() {
 
       <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
         <h1 className="text-slate-700 font-bold text-3xl lg:text-6xl">
-          "Discover Your Ultimate<span className="text-slate-500">Tech</span>
+          Discover Your Ultimate<span className="text-slate-500">Tech</span>
           <br />
-          Solutions Here"
+          Solutions Here
         </h1>
         <div className="text-gray-400 text-xs sm:text-sm">
           Welcome to our revolutionary technology app! With our platform, you can effortlessly explore and find the perfect devices to suit your needs.
